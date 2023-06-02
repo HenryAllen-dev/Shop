@@ -3,13 +3,37 @@ a {
   color: unset;
 }
 @font-face {
-  font-family: "roboto";
-  src: url("./Roboto-Regular.eot");
-  src: url("./Roboto-Regular.eot?#iefix") format("embedded-opentype"),
-    url("./Roboto-Regular.woff2") format("woff2"),
-    url("./Roboto-Regular.woff") format("woff"),
-    url("./Roboto-Regular.ttf") format("truetype");
+  font-family: "Titillium";
+  src: url("Titillium-Bold.woff2") format("woff2"),
+    url("Titillium-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url("Titillium-Regular.woff2") format("woff2"),
+    url("Titillium-Regular.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url("Titillium-Thin.woff2") format("woff2"),
+    url("Titillium-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url("Titillium-Black.woff2") format("woff2"),
+    url("Titillium-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
