@@ -11,19 +11,9 @@ const MostPopularSlider = () => {
       <Typography fontWeight="bolder" m={2} variant="h5">
         Most Popular
       </Typography>
-      <Slider
-        arrows={false}
-        slidesToShow={1}
-        variableWidth
-        autoplay
-        autoplaySpeed={2000}
-        speed={2000}
-        swipeToSlide
-      >
+      <Slider infinite={false} arrows={false} slidesToShow={1} variableWidth swipeToSlide>
         {popularProducts.map((item) => (
-          <Box key={item.title} m={2}>
-            <ProductCard item={item} />
-          </Box>
+          <ProductCard onSlider={true} item={item} key={item.title} />
         ))}
       </Slider>
     </Box>

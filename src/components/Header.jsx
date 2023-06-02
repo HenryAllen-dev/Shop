@@ -36,7 +36,7 @@ const Header = () => {
             xs={12}
             md={6}
           >
-            <Typography mx={1} fontWeight="bolder" color="white" variant="h4">
+            <Typography mx={1} fontWeight={900} color="white" variant="h4">
               Henry Allen Shop
               <ThemeSwitch />
             </Typography>

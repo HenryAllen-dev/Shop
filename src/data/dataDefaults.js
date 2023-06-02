@@ -254,6 +254,12 @@ export const initData = {
         "https://dlcdnwebimgs.asus.com/gain/b1ce899f-4c45-4ede-97da-bc4ff7586c2e/w328",
     },
     {
+      id: 3,
+      name: "Headset",
+      image:
+        "https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g335/g335-white-gallery-1.png?v=1",
+    },
+    {
       id: 4,
       name: "GPU",
       image:

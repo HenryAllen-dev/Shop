@@ -11,19 +11,9 @@ const OffersSlider = () => {
       <Typography fontWeight="bolder" m={2} variant="h5">
         Offers %
       </Typography>
-      <Slider
-        variableWidth
-        autoplay
-        autoplaySpeed={2000}
-        speed={2000}
-        arrows={false}
-        slidesToShow={1}
-        swipeToSlide
-      >
+      <Slider variableWidth arrows={false} infinite={false} slidesToShow={1} swipeToSlide>
         {offProducts.map((item) => (
-          <Box key={item.title} m={2}>
-            <ProductCard item={item} />
-          </Box>
+          <ProductCard onSlider={true} item={item} key={item.title} />
         ))}
       </Slider>
     </Box>

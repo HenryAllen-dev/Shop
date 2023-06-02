@@ -5,7 +5,7 @@ const Theme = ({ children }) => {
   const [mode, setMode] = useState("dark");
   let theme = createTheme({
     palette: { primary: { main: "#00B8FC" }, mode },
-    typography: { fontFamily: "roboto" },
+    typography: { fontFamily: "Titillium" },
   });
   theme = responsiveFontSizes(theme);
 

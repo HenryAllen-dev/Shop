@@ -24,7 +24,7 @@ const Product = () => {
           <Grid p={3} xs={12} md={4}>
             <img
               onError={(e) => {
-                e.target.src =  NotFoundImage ;
+                e.target.src = NotFoundImage;
               }}
               width="100%"
               src={product.picture}
@@ -32,10 +32,10 @@ const Product = () => {
             />
           </Grid>
           <Grid xs={12} md={8}>
-            <Typography fontWeight="bolder" variant="h2">
+            <Typography fontWeight="bolder" variant="h4">
               {product.title}
             </Typography>
-            <Typography m={2} variant="h4">
+            <Typography fontWeight={100} my={2} variant="h6">
               {product.description}
             </Typography>
             <Box mt={2}>
