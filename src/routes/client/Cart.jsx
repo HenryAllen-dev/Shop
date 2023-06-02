@@ -60,7 +60,7 @@ const Cart = () => {
             </ListItem>
           ) : (
             cartItems.map((cartItem) => (
-              <ListItem key={cartItem.title}>
+              <ListItem key={cartItem.title} sx={{display:"flex",flexWrap:"wrap"}}>
                 <ListItemAvatar>
                   <Avatar
                     sizes="large"

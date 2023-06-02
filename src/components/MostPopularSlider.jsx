@@ -13,12 +13,12 @@ const MostPopularSlider = () => {
       </Typography>
       <Slider
         arrows={false}
-        swipeToSlide={1}
         slidesToShow={1}
         variableWidth
         autoplay
         autoplaySpeed={2000}
         speed={2000}
+        swipeToSlide
       >
         {popularProducts.map((item) => (
           <Box key={item.title} m={2}>

@@ -12,14 +12,13 @@ const OffersSlider = () => {
         Offers %
       </Typography>
       <Slider
-        arrows={false}
-        swipeToSlide={1}
-        slidesToShow={1}
         variableWidth
-        infinite
         autoplay
         autoplaySpeed={2000}
         speed={2000}
+        arrows={false}
+        slidesToShow={1}
+        swipeToSlide
       >
         {offProducts.map((item) => (
           <Box key={item.title} m={2}>
