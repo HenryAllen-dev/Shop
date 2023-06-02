@@ -8,12 +8,14 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { nanoid } from "@reduxjs/toolkit";
 import { Helmet } from "react-helmet-async";
+import NotFoundImage from "../../assets/image-not-found.jpg";
 const AddProduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,19 +39,17 @@ const AddProduct = () => {
     navigate("/dashboard");
   };
   const categories = useSelector((state) => state.category);
-  const [imagePlaceHolder, setImagePlaceHolder] = useState(
-    "/images/image-not-found.jpg"
-  );
+  const [imagePlaceHolder, setImagePlaceHolder] = useState(NotFoundImage);
   return (
     <Container>
-        <Helmet>
+      <Helmet>
         <title>Dashboard | Add Product</title>
       </Helmet>
       <Grid mt={2} container>
         <Grid p={3} xs={12} md={4}>
           <img
             onError={(e) => {
-              e.target.src = "/images/image-not-found.jpg";
+              e.target.src = NotFoundImage;
             }}
             width="100%"
             src={imagePlaceHolder}

@@ -69,7 +69,7 @@ export const initData = {
       category: 4,
       rate: 94,
       picture:
-        "https://images.nvidia.com/content/images/article/nvidia-geforce-rtx-2060/geforce-rtx-2060-001.png",
+        "https://dlcdnwebimgs.asus.com/files/media/601f20ed-f8b1-4fb8-90e5-15b8fb204825/img/kv/product-kv_s.jpg",
       off: 10,
     },
     {
@@ -81,7 +81,7 @@ export const initData = {
       category: 4,
       rate: 70,
       picture:
-        "https://www.nvidia.com/content/dam/en-zz/Solutions/GeForce/campaigns/10-series/geforce-1080-ti-2c50-D.png",
+        "https://imageio.forbes.com/blogs-images/jasonevangelho/files/2018/11/1080-Ti-1200x646.jpg?format=jpg&width=1200",
       off: 2,
     },
     {
@@ -257,7 +257,7 @@ export const initData = {
       id: 4,
       name: "GPU",
       image:
-        "https://images.nvidia.com/content/images/article/nvidia-geforce-rtx-2060/geforce-rtx-2060-001.png",
+        "https://imageio.forbes.com/blogs-images/jasonevangelho/files/2018/11/1080-Ti-1200x646.jpg?format=jpg&width=1200",
     },
     {
       id: 5,

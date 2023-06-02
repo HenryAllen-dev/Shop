@@ -8,6 +8,8 @@ import { ShoppingCartOutlined, Window } from "@mui/icons-material";
 import { addToCart } from "../../reducers/cartSlice";
 import { categoryIdtoName } from "../../categoryIdtoName";
 import { Helmet } from "react-helmet-async";
+import NotFoundImage from "../../assets/image-not-found.jpg";
+
 const Product = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -22,7 +24,7 @@ const Product = () => {
           <Grid p={3} xs={12} md={4}>
             <img
               onError={(e) => {
-                e.target.src = "/images/image-not-found.jpg";
+                e.target.src =  NotFoundImage ;
               }}
               width="100%"
               src={product.picture}

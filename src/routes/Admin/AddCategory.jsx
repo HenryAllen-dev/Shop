@@ -7,13 +7,12 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import _ from "lodash";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import NotFoundImage from "../../assets/image-not-found.jpg";
 
 const AddCategory = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [imagePlaceHolder, setImagePlaceHolder] = useState(
-    "/images/image-not-found.jpg"
-  );
+  const [imagePlaceHolder, setImagePlaceHolder] = useState(NotFoundImage);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -23,20 +22,20 @@ const AddCategory = () => {
       newCategory[key] = value;
     }
     dispatch(addCategory({ id: _.random(10000), ...newCategory }));
-    toast.success("Category Created")
+    toast.success("Category Created");
     navigate("/dashboard/categories");
   };
 
   return (
     <Container>
-         <Helmet>
+      <Helmet>
         <title>Dashboard | Add Category</title>
       </Helmet>
       <Grid mt={2} container>
         <Grid p={3} xs={12} md={4}>
           <img
             onError={(e) => {
-              e.target.src = "/images/image-not-found.jpg";
+              e.target.src = {};
             }}
             width="100%"
             src={imagePlaceHolder}

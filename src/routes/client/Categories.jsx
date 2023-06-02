@@ -6,6 +6,8 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import NotFoundImage from "../../assets/image-not-found.jpg";
+
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { Link, useSearchParams } from "react-router-dom";
@@ -37,7 +39,7 @@ const Categories = () => {
                   image={item.image}
                   alt="Product"
                   onError={(e) => {
-                    e.target.src = "/images/image-not-found.jpg";
+                    e.target.src = NotFoundImage;
                   }}
                 />
                 <CardContent>

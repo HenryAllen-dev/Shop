@@ -7,6 +7,7 @@ import {
   Rating,
   Typography,
 } from "@mui/material";
+import NotFoundImage from "../../assets/image-not-found.jpg";
 import { Link } from "react-router-dom";
 import Price from "./Price";
 import _ from "lodash";
@@ -27,7 +28,7 @@ const ProductCard = ({ item }) => {
             image={item.picture}
             alt="Product Picture"
             onError={(e) => {
-              e.target.src = "/images/image-not-found.jpg";
+              e.target.src = NotFoundImage;
             }}
           />
           <CardContent>

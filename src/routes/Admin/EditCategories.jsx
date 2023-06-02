@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { deleteCategory, editCategory } from "../../reducers/categorySlice";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import NotFoundImage from "../../assets/image-not-found.jpg";
 
 const EditCategories = () => {
   const dispatch = useDispatch();
@@ -24,25 +25,25 @@ const EditCategories = () => {
       updatedCategory[key] = value;
     }
     dispatch(editCategory({ id: Number(id), updatedCategory }));
-    toast.info("Category Updated")
+    toast.info("Category Updated");
     navigate("/dashboard/categories");
   };
   const handleDelete = () => {
     dispatch(deleteCategory(id));
-    toast.error("Category Deleted")
+    toast.error("Category Deleted");
     navigate("/dashboard/categories");
-
   };
+
   return (
     <Container>
-         <Helmet>
+      <Helmet>
         <title>Dashboard | Edit Category</title>
       </Helmet>
       <Grid mt={2} container>
         <Grid p={3} xs={12} md={4}>
           <img
             onError={(e) => {
-              e.target.src = "/images/image-not-found.jpg";
+              e.target.src = NotFoundImage;
             }}
             width="100%"
             src={imagePlaceHolder}

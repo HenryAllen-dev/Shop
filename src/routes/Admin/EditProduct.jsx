@@ -13,6 +13,8 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+import NotFoundImage from "../../assets/image-not-found.jpg";
+
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -57,7 +59,7 @@ const EditProduct = () => {
         <Grid p={3} xs={12} md={4}>
           <img
             onError={(e) => {
-              e.target.src = "/images/image-not-found.jpg";
+              e.target.src = NotFoundImage;
             }}
             width="100%"
             src={imagePlaceHolder}
