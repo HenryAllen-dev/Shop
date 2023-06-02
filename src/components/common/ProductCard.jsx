@@ -35,6 +35,9 @@ const ProductCard = ({ item }) => {
             <Typography gutterBottom variant="body1" component="div">
               {_.truncate(item.title, { length: 20 })}
             </Typography>
+            <Typography gutterBottom variant="body1" component="div">
+              {_.truncate(item.description, { length: 20 })}
+            </Typography>
             <Rating readOnly defaultValue={item.rate / 20} />
           </CardContent>
         </Link>
