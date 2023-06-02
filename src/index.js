@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { CssBaseline } from "@mui/material";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes/routes";
+import "react-toastify/dist/ReactToastify.min.css";
+import Theme from "./Theme";
+import { HelmetProvider } from "react-helmet-async";
+const root = createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <HelmetProvider>
+      <Theme>
+        <CssBaseline />
+        <Provider store={store}>
+          <RouterProvider router={routes} />
+        </Provider>
+      </Theme>
+    </HelmetProvider>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
